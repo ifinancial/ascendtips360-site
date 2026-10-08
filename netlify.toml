@@ -1,0 +1,25 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# Clean URLs (e.g. /pricing -> /pricing.html) are handled automatically by Netlify "Pretty URLs".
+[[redirects]]
+  from = "/book"
+  to = "/book.html"
+  status = 301
+[[redirects]]
+  from = "/consult"
+  to = "/book.html"
+  status = 301

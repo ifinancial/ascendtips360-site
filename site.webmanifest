@@ -3,8 +3,8 @@
  "short_name": "Ascend360",
  "start_url": "/",
  "display": "standalone",
- "background_color": "#f3f6f0",
- "theme_color": "#0f2a20",
+ "background_color": "#0e0f10",
+ "theme_color": "#0e0f10",
  "icons": [
   {
    "src": "/icon-192.png",
